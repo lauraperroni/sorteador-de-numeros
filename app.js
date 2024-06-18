@@ -7,11 +7,13 @@ function sortear() {
     let de = parseInt(document.getElementById('de').value);
     let ate = parseInt(document.getElementById('ate').value);
 
+    // Valida se o período de números é válido ou não
     if (de > ate) {
         alert('O número "de" deve ser menor que o número "até", tente novamente!');
         reiniciar();
     }
 
+    // Valida se a quantidade de números no período é igual ou maior que a quantidade de números solicitada para serem sorteados
     let result = ate - de;
     if (result < quantidade){
         alert(`A quantidade de números no período informado deve ser igual ou superior à quantidade de números que você deseja sortear. Entre ${de} e ${ate} existem apenas ${result} números, e você quer sortear ${quantidade} números diferentes.`);
